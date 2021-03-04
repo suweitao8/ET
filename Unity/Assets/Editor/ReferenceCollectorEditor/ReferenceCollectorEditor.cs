@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 //Object并非C#基础中的Object，而是 UnityEngine.Object
 using Object = UnityEngine.Object;
+using System.Linq;
 
 //自定义ReferenceCollector类在界面中的显示与功能
 [CustomEditor(typeof (ReferenceCollector))]
@@ -136,6 +137,22 @@ public class ReferenceCollectorEditor: Editor
 		{
 			dataProperty.DeleteArrayElementAtIndex(i);
 		}
+
+		if (GUILayout.Button("自动引用"))
+		{
+            for (int i = referenceCollector.data.Count - 1; i >= 0; i--)
+            {
+				dataProperty.DeleteArrayElementAtIndex(i);
+			}
+			GameObject[] gos = referenceCollector.GetComponentsInChildren<Bind>(true)
+				.Select(b => b.gameObject)
+				.ToArray();
+            foreach (var go in gos)
+            {
+				AddReference(dataProperty, go.name, go);
+            }
+		}
+
 		serializedObject.ApplyModifiedProperties();
 		serializedObject.UpdateIfRequiredOrScript();
 	}

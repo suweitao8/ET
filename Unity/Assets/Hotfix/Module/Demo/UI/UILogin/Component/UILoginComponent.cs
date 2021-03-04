@@ -14,7 +14,16 @@ namespace ETHotfix
 			self.Awake();
 		}
 	}
-	
+
+	[ObjectSystem]
+	public class UiLoginComponentStartSystem : StartSystem<UILoginComponent>
+	{
+		public override void Start(UILoginComponent self)
+		{
+			self.Start();
+		}
+	}
+
 	public class UILoginComponent: Component
 	{
 		private GameObject account;
@@ -28,9 +37,16 @@ namespace ETHotfix
 			this.account = rc.Get<GameObject>("Account");
 		}
 
+		public void Start()
+        {
+			
+		}
+
 		public void OnLogin()
 		{
-			LoginHelper.OnLoginAsync(this.account.GetComponent<InputField>().text).Coroutine();
+			// LoginHelper.OnLoginAsync(this.account.GetComponent<InputField>().text).Coroutine();
+			Debug.Log("尝试关闭");
+			UIUtil.Close(UIType.UILogin);
 		}
 	}
 }
