@@ -8,7 +8,8 @@ namespace ETModel
 	{
 		public override void Awake(UILoadingComponent self)
 		{
-			self.text = self.GetParent<UI>().GameObject.Get<GameObject>("Text").GetComponent<Text>();
+			self.txtProcess = self.GetParent<UI>().GameObject.Get<GameObject>("txtProcess").GetComponent<Text>();
+			self.imgProcess = self.GetParent<UI>().GameObject.Get<GameObject>("imgProcess").GetComponent<Image>();
 		}
 	}
 
@@ -38,13 +39,15 @@ namespace ETModel
 				{
 					continue;
 				}
-				self.text.text = $"{bundleDownloaderComponent.Progress}%";
+				self.txtProcess.text = $"{bundleDownloaderComponent.Progress}%";
+				self.imgProcess.fillAmount = (bundleDownloaderComponent.Progress + 1) / 100;
 			}
 		}
 	}
 
 	public class UILoadingComponent : Component
 	{
-		public Text text;
+		public Text txtProcess;
+		public Image imgProcess;
 	}
 }

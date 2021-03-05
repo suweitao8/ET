@@ -245,17 +245,17 @@
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
     </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.20f1c1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -693,11 +693,11 @@
     <Compile Include="Assets\Model\Component\GlobalConfigComponent.cs" />
     <Compile Include="Assets\Model\Component\SceneChangeComponent.cs" />
     <Compile Include="Assets\Model\Component\TimerComponent.cs" />
+    <Compile Include="Assets\Model\Demo\Bind.cs" />
     <Compile Include="Assets\Model\Entity\Game.cs" />
     <Compile Include="Assets\Model\Entity\Hotfix.cs" />
     <Compile Include="Assets\Model\Entity\Scene.cs" />
     <Compile Include="Assets\Model\Entity\UnityWebRequestAsync.cs" />
-    <Compile Include="Assets\Model\FPS\Bind.cs" />
     <Compile Include="Assets\Model\Helper\ActionHelper.cs" />
     <Compile Include="Assets\Model\Helper\BundleHelper.cs" />
     <Compile Include="Assets\Model\Helper\GameObjectHelper.cs" />
@@ -1061,12 +1061,6 @@
     <Compile Include="Assets\Model\Other\MonoStaticMethod.cs" />
     <Compile Include="Assets\Model\Other\MotionType.cs" />
     <Compile Include="Assets\Model\Other\ReferenceCollector.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Sample\AndroidDebug.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Sample\RotateAnim.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Sample\SampleSpeechToText.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Sample\SpeechButton.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Scripts\SpeechToText.cs" />
-    <Compile Include="Assets\Model\SpeechToText\Scripts\TextToSpeech.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
@@ -1075,7 +1069,6 @@
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme_upgrading.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\link.xml" />
-    <None Include="Assets\Model\SpeechToText\README.txt" />
     <None Include="Assets\Model\Unity.Model.asmdef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

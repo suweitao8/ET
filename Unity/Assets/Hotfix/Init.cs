@@ -39,9 +39,6 @@ namespace ETHotfix
 				Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 
 				UIUtil.Create<UIMenu>();
-				TextSpeech.TextToSpeech.instance.Setting("en-US", 1, 1);
-				// UIUtil.Create<UILoginComponent>(UIType.UILogin);
-				// Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
 			catch (Exception e)
 			{
