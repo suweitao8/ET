@@ -40,7 +40,7 @@ namespace ETModel
 					continue;
 				}
 				self.txtProcess.text = $"{bundleDownloaderComponent.Progress}%";
-				self.imgProcess.fillAmount = (bundleDownloaderComponent.Progress + 1) / 100;
+				self.imgProcess.fillAmount = (bundleDownloaderComponent.Progress + 1) * 1f / 100f;
 			}
 		}
 	}

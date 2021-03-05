@@ -44,21 +44,11 @@ namespace ETHotfix
 
 	public class UIMessage: Component
 	{
-        Text txtDescription;
-        Text txtTitle;
-
+	      
         public void Awake()
         {
-            ReferenceCollector rc = this.GetUIRC();
-            txtTitle = rc.GetText("txtTitle");
-            txtDescription = rc.GetText("txtDescription");
-            rc.GetButton("btnClose").OnClick(() =>
-            {
-                Game.EventSystem.Run(EventIdType.SayHello, "UIMessage");
-                // UIUtil.Close<UIMessage>();
-            });
         }
-
+      
         public void Start()
         {
         }
@@ -71,10 +61,5 @@ namespace ETHotfix
         {
         }
 
-        public void SetData(string title, string description)
-        {
-            txtTitle.text = title;
-            txtDescription.text = description;
-        }
     }
 }

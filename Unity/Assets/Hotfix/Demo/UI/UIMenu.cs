@@ -49,10 +49,6 @@ namespace ETHotfix
         public void Awake()
         {
             ReferenceCollector rc = this.GetUIRC();
-            btnShowMessage = rc.GetButton("btnShowMessage").OnClick(() =>
-            {
-                UIUtil.Create<UIMessage>().SetData("你好吗？", "我的世界");
-            });
         }
       
         public void Start()

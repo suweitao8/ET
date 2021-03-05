@@ -204,6 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
+  - key: imgProcess
+    gameObject: {fileID: 1999870087912903564}
   - key: txtProcess
     gameObject: {fileID: 1173942238304288}
 --- !u!1 &572237328476073730

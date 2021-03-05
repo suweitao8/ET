@@ -2,12 +2,18 @@
     "name": "Unity.Hotfix",
     "references": [
         "Unity.Model",
-        "Unity.ThirdParty"
+        "Unity.ThirdParty",
+        "Cinemachine"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor"
     ],
     "excludePlatforms": [],
-    "allowUnsafeCode": true
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

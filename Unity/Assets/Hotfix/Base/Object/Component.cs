@@ -18,6 +18,8 @@ namespace ETHotfix
 		
 		[BsonIgnore]
 		public GameObject GameObject { get; protected set; }
+
+		public Transform transform => GameObject.transform;
 #endif
 
 		[BsonIgnore]
