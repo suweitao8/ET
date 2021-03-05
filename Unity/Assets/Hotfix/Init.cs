@@ -38,7 +38,9 @@ namespace ETHotfix
 				UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
 				Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 
-				UIUtil.Create<UILoginComponent>(UIType.UILogin);
+				UIUtil.Create<UIMenu>();
+				TextSpeech.TextToSpeech.instance.Setting("en-US", 1, 1);
+				// UIUtil.Create<UILoginComponent>(UIType.UILogin);
 				// Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
 			catch (Exception e)

@@ -11,4 +11,14 @@ namespace ETHotfix
 			Game.Scene.GetComponent<UIComponent>().Add(ui);
 		}
 	}
+
+	[Event(EventIdType.SayHello)]
+	public class SayHelloEvent : AEvent<string>
+	{
+		public override void Run(string name)
+		{
+			Game.Scene.GetComponent<UIComponent>().Remove(name);
+			ResourcesUtil.Unload(name);
+		}
+	}
 }

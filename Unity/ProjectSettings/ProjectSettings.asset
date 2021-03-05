@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -723,7 +723,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: NET452;ILRuntime;ODIN_INSPECTOR
     4: NET452;ILRuntime
-    7: NET452;ILRuntime
+    7: NET452;ILRuntime;ODIN_INSPECTOR
     13: NET452;ILRuntime
   platformArchitecture:
     iPhone: 2

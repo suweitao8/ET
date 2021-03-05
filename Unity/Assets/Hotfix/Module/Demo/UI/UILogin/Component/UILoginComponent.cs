@@ -44,9 +44,7 @@ namespace ETHotfix
 
 		public void OnLogin()
 		{
-			// LoginHelper.OnLoginAsync(this.account.GetComponent<InputField>().text).Coroutine();
-			Debug.Log("尝试关闭");
-			UIUtil.Close(UIType.UILogin);
+			LoginHelper.OnLoginAsync(this.account.GetComponent<InputField>().text).Coroutine();
 		}
 	}
 }

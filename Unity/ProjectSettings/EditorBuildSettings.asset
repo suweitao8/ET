@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Init.unity
     guid: e0d691ac8c1d0454ba07089ea820e18a
+  - enabled: 0
+    path: Assets/Model/SpeechToText/Test/Speech.unity
+    guid: 6991895c198b56c48bdfb31f9ea43258
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: a5294483f20f40d449699101bb428cda
+    path: Assets/Model/SpeechToText/Sample/SampleSpeechToText.unity
+    guid: d9447599b4cad0245ac00fa552c354b6
   m_configObjects: {}
