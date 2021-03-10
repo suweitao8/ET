@@ -28,6 +28,38 @@ namespace ETModel
 			appdomain.DelegateManager.RegisterMethodDelegate<ILTypeInstance>();
 			appdomain.DelegateManager.RegisterFunctionDelegate<Google.Protobuf.Adapt_IMessage.Adaptor>();
 			appdomain.DelegateManager.RegisterMethodDelegate<Google.Protobuf.Adapt_IMessage.Adaptor>();
+			appdomain.DelegateManager.RegisterMethodDelegate<System.Int32>();
+			appdomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<System.Int32>>((act) =>
+			{
+				return new UnityEngine.Events.UnityAction<System.Int32>((arg0) =>
+				{
+					((Action<System.Int32>)act)(arg0);
+				});
+			});
+			appdomain.DelegateManager.RegisterMethodDelegate<string>();
+			appdomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<string>>((act) =>
+			{
+				return new UnityEngine.Events.UnityAction<string>((arg0) =>
+				{
+					((Action<string>)act)(arg0);
+				});
+			});
+			appdomain.DelegateManager.RegisterMethodDelegate<float>();
+			appdomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<float>>((act) =>
+			{
+				return new UnityEngine.Events.UnityAction<float>((arg0) =>
+				{
+					((Action<float>)act)(arg0);
+				});
+			});
+			appdomain.DelegateManager.RegisterMethodDelegate<bool>();
+			appdomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<bool>>((act) =>
+			{
+				return new UnityEngine.Events.UnityAction<bool>((arg0) =>
+				{
+					((Action<bool>)act)(arg0);
+				});
+			});
 
 			CLRBindings.Initialize(appdomain);
 

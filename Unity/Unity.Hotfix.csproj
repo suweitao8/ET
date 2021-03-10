@@ -89,13 +89,17 @@
     <Compile Include="Assets\Hotfix\Base\Object\IUpdateSystem.cs" />
     <Compile Include="Assets\Hotfix\Base\Object\Object.cs" />
     <Compile Include="Assets\Hotfix\Base\Object\ObjectPool.cs" />
-    <Compile Include="Assets\Hotfix\Demo\GameManager.cs" />
-    <Compile Include="Assets\Hotfix\Demo\PlayerController.cs" />
-    <Compile Include="Assets\Hotfix\Demo\UI\UIGame.cs" />
-    <Compile Include="Assets\Hotfix\Demo\UI\UIMenu.cs" />
-    <Compile Include="Assets\Hotfix\Demo\UI\UIMessage.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Manager\EventManager.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Manager\GameObjectManager.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Manager\SaveManager.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Misc\Constants.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Misc\Enums.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Misc\FSM.cs" />
+    <Compile Include="Assets\Hotfix\Demo\UI\UILogin.cs" />
     <Compile Include="Assets\Hotfix\Demo\Utils\Extensions.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Utils\Prefs.cs" />
     <Compile Include="Assets\Hotfix\Demo\Utils\ResourcesUtil.cs" />
+    <Compile Include="Assets\Hotfix\Demo\Utils\SceneUtil.cs" />
     <Compile Include="Assets\Hotfix\Demo\Utils\UIUtil.cs" />
     <Compile Include="Assets\Hotfix\Entity\Game.cs" />
     <Compile Include="Assets\Hotfix\Entity\Scene.cs" />
@@ -750,10 +754,6 @@
     <ProjectReference Include="Unity.ThirdParty.csproj">
       <Project>{E15BADD2-3A26-309A-AB0F-DC5B08044350}</Project>
       <Name>Unity.ThirdParty</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{66440FFE-68FC-FE3B-96B7-2CCAAEFE0C97}</Project>
-      <Name>Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{C0C5E174-727C-9FFA-CD43-B55BDEF754DA}</Project>

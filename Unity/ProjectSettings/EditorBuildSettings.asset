@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Init.unity
     guid: e0d691ac8c1d0454ba07089ea820e18a
-  - enabled: 0
-    path: Assets/Model/SpeechToText/Test/Speech.unity
-    guid: 6991895c198b56c48bdfb31f9ea43258
   - enabled: 1
-    path: Assets/Model/SpeechToText/Sample/SampleSpeechToText.unity
-    guid: d9447599b4cad0245ac00fa552c354b6
+    path: Assets/Bundles/Scenes/NinjiaDemo.unity
+    guid: 9a36afe203cf34b4fad518f34185f921
   m_configObjects: {}

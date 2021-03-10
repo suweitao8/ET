@@ -5,6 +5,7 @@ using UnityEngine;
 //Object并非C#基础中的Object，而是 UnityEngine.Object
 using Object = UnityEngine.Object;
 using System.Linq;
+using ETModel;
 
 //自定义ReferenceCollector类在界面中的显示与功能
 [CustomEditor(typeof (ReferenceCollector))]

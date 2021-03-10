@@ -700,6 +700,11 @@
     <Compile Include="Assets\Model\Component\SceneChangeComponent.cs" />
     <Compile Include="Assets\Model\Component\TimerComponent.cs" />
     <Compile Include="Assets\Model\Demo\Bind.cs" />
+    <Compile Include="Assets\Model\Demo\FSMClear.cs" />
+    <Compile Include="Assets\Model\Demo\LanguageID.cs" />
+    <Compile Include="Assets\Model\Demo\LanguageManager.cs" />
+    <Compile Include="Assets\Model\Demo\LanguageTable.cs" />
+    <Compile Include="Assets\Model\Demo\ResourcesUtil.cs" />
     <Compile Include="Assets\Model\Entity\Game.cs" />
     <Compile Include="Assets\Model\Entity\Hotfix.cs" />
     <Compile Include="Assets\Model\Entity\Scene.cs" />

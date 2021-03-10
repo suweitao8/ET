@@ -35,11 +35,11 @@ namespace ETHotfix
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 
-				UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
-				// Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
+				// 打开登录界面
+				UIUtil.Open<UILogin>();
 
-				// UIUtil.Create<UIMenu>();
-				Game.Scene.AddComponent<GameManager>();
+				// UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
+				// Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 			}
 			catch (Exception e)
 			{
