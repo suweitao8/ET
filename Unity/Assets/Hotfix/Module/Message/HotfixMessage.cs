@@ -9,6 +9,156 @@ using scg = global::System.Collections.Generic;
 namespace ETHotfix {
 
   #region Messages
+  public partial class C2G_GetUserName : pb::IMessage {
+    private static readonly pb::MessageParser<C2G_GetUserName> _parser = new pb::MessageParser<C2G_GetUserName>(() => (C2G_GetUserName)MessagePool.Instance.Fetch(typeof(C2G_GetUserName)));
+    public static pb::MessageParser<C2G_GetUserName> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      rpcId_ = 0;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public partial class G2C_GetUsername : pb::IMessage {
+    private static readonly pb::MessageParser<G2C_GetUsername> _parser = new pb::MessageParser<G2C_GetUsername>(() => (G2C_GetUsername)MessagePool.Instance.Fetch(typeof(G2C_GetUsername)));
+    public static pb::MessageParser<G2C_GetUsername> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private int error_;
+    public int Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private string username_ = "";
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Username.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Username);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+      if (Error != 0) {
+        output.WriteRawTag(216, 5);
+        output.WriteInt32(Error);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(226, 5);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Error != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Error);
+      }
+      if (Message.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      username_ = "";
+      rpcId_ = 0;
+      error_ = 0;
+      message_ = "";
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Username = input.ReadString();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+          case 728: {
+            Error = input.ReadInt32();
+            break;
+          }
+          case 738: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public partial class C2R_Login : pb::IMessage {
     private static readonly pb::MessageParser<C2R_Login> _parser = new pb::MessageParser<C2R_Login>(() => (C2R_Login)MessagePool.Instance.Fetch(typeof(C2R_Login)));
     public static pb::MessageParser<C2R_Login> Parser { get { return _parser; } }
@@ -21,36 +171,18 @@ namespace ETHotfix {
       }
     }
 
-    private string account_ = "";
-    /// <summary>
-    /// 帐号
-    /// </summary>
-    public string Account {
-      get { return account_; }
+    private string username_ = "";
+    public string Username {
+      get { return username_; }
       set {
-        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    private string password_ = "";
-    /// <summary>
-    /// 密码
-    /// </summary>
-    public string Password {
-      get { return password_; }
-      set {
-        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Account.Length != 0) {
+      if (Username.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Account);
-      }
-      if (Password.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Password);
+        output.WriteString(Username);
       }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
@@ -63,18 +195,14 @@ namespace ETHotfix {
       if (RpcId != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
-      if (Account.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
-      }
-      if (Password.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
       return size;
     }
 
     public void MergeFrom(pb::CodedInputStream input) {
-      account_ = "";
-      password_ = "";
+      username_ = "";
       rpcId_ = 0;
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -83,11 +211,7 @@ namespace ETHotfix {
             input.SkipLastField();
             break;
           case 10: {
-            Account = input.ReadString();
-            break;
-          }
-          case 18: {
-            Password = input.ReadString();
+            Username = input.ReadString();
             break;
           }
           case 720: {

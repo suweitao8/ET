@@ -24,7 +24,7 @@ namespace ETHotfix
 			response.PlayerId = player.Id;
 			reply();
 
-			session.Send(new G2C_TestHotfixMessage() { Info = "recv hotfix message success" });
+			// session.Send(new G2C_TestHotfixMessage() { Info = "recv hotfix message success" });
 			await ETTask.CompletedTask;
 		}
 	}

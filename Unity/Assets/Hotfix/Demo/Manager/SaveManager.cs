@@ -47,9 +47,13 @@ namespace ETHotfix
 	{
         public static SaveManager Instance;
 
+        public StringPrefs language;
+
         public void Awake()
         {
             Instance = this;
+
+            language = new StringPrefs("Language", "CH");
         }
 
         public void Start()

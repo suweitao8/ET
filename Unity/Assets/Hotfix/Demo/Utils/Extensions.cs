@@ -108,6 +108,11 @@ namespace ETHotfix
             return rc.GetGameObject(key).GetComponent<Button>();
         }
 
+        public static InputField GetInputField(this ReferenceCollector rc, string key)
+        {
+            return rc.GetGameObject(key).GetComponent<InputField>();
+        }
+
         /// <summary>
         /// 获取rc的Dropdown
         /// </summary>
@@ -285,9 +290,14 @@ namespace ETHotfix
         /// <summary>
         /// 调用
         /// </summary>
-        public static void Fire(string eventName, params object[] args)
+        public static void Fire(this object self, string eventName, params object[] args)
         {
             EventManager.Fire(eventName, args);
+        }
+
+        public static async ETTask<K> Call<T, K>(this Session self, T request) where T: IRequest where K : IResponse
+        {
+            return (K)(await self.Call(request));
         }
     }
 }

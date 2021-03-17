@@ -25,12 +25,8 @@ namespace ETModel
         private void Awake()
         {
             text = GetComponent<Text>();
-            LanguageManager.Instance.onTableChanged += OnTangleChanged;
-        }
-
-        private void Start()
-        {
             Chinese = text.text;
+            LanguageManager.Instance.onTableChanged += OnTangleChanged;
         }
 
         void OnTangleChanged()

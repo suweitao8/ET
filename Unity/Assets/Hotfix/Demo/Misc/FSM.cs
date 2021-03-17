@@ -8,6 +8,8 @@ namespace ETHotfix
     public enum FSMState
     {
         None,
+        Menu,
+        Game,
     }
 
     /// <summary>

@@ -51,6 +51,7 @@ namespace ETModel
         /// </summary>
         public string GetWord(string chinese)
         {
+            chinese = chinese.Trim();
             if (curTable == null)
             {
                 return chinese;
@@ -62,8 +63,6 @@ namespace ETModel
                     return info.word;
                 }
             }
-
-            Debug.LogError($"{curTable.languageName}中没有找到对应的单词：{chinese}");
             return chinese;
         }
     }

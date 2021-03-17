@@ -15,6 +15,11 @@
 		
 		public long UnitId { get; set; }
 
+		/// <summary>
+		/// 当前玩家的会话
+		/// </summary>
+		public Session session => GetParent<SessionPlayerComponent>().GetParent<Session>();
+
 		public void Awake(string account)
 		{
 			this.Account = account;
